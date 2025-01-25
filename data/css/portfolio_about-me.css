@@ -82,6 +82,11 @@
     content: 'University Academy 92';
     color: #C778DD;
     font-weight: bold;
+    cursor: pointer;
+}
+
+#Portfolio-Footer__Title--Uni:hover::after {
+    color: white;
 }
 
 #AboutMe-Main__Title {

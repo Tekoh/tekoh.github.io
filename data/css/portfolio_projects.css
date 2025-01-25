@@ -81,10 +81,20 @@
     transition: ease 0.3s;
 }
 
+#Portfolio-Footer__Title--Uni {
+    cursor: default;
+    transition: ease 0.3s;
+}
+
 #Portfolio-Footer__Title--Uni::after {
     content: 'University Academy 92';
     color: #C778DD;
     font-weight: bold;
+    cursor: pointer;
+}
+
+#Portfolio-Footer__Title--Uni:hover::after {
+    color: white;
 }
 
 .Portfolio-Projects {
