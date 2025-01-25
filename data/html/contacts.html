@@ -41,18 +41,34 @@
         </div>
       </div>
     </div>
-    <form class="Portfolio-Contacts__Form" action="mailto:mahdraihan@outlook.com" method="post" enctype="text/plain">
-      <p id="Portfolio-Contacts__Form--Title">Send me a message</p>
-      <div class="Portfolio-Contacts__Form--Wrapper">
-        <input type="text" id="Portfolio-Contacts__Form--Name" name="Name" placeholder="Name" required />
-        <input type="email" id="Portfolio-Contacts__Form--Email" name="Email" placeholder="Email" required />
-      </div>
-      <input type="email" id="Portfolio-Contacts__Form--Subject" name="Subject" placeholder="Subject" required />
-      <textarea type="text" id="Portfolio-Contacts__Form--Message" name="Message" placeholder="Message"
-        required></textarea>
-      <input type="submit" id="Portfolio-Contacts__Form--Submit" value="Send" />
-      <input type="submit" id="Portfolio-Contacts__Form--Newsletter" value="Subscribe To Tekoh's Newsletter" />
-    </form>
+    <div class="Portfolio-Contacts__Wrapper">
+      <form class="Portfolio-Contacts__Form" action="mailto:mahdraihan@outlook.com" method="post" enctype="text/plain">
+        <p id="Portfolio-Contacts__Form--Title">Send me a message</p>
+        <div class="Portfolio-Contacts__Form--Wrapper">
+          <input type="text" id="Portfolio-Contacts__Form--Name" name="Name" placeholder="Name" required />
+          <input type="email" id="Portfolio-Contacts__Form--Email" name="Email" placeholder="Email" required />
+        </div>
+        <input type="email" id="Portfolio-Contacts__Form--Subject" name="Subject" placeholder="Subject" required />
+        <textarea type="text" id="Portfolio-Contacts__Form--Message" name="Message" placeholder="Message"
+          required></textarea>
+        <input type="submit" id="Portfolio-Contacts__Form--Submit" value="Send" />
+      </form>
+      <form class="Portfolio-Contacts__Form" onclick="Newletter_Popup()">
+        <button type="button" class="Portfolio-Contacts__Form--Newsletter" id="subscribeButton">Subscribe To Tekoh's
+          Newsletter</button>
+        <div id="Portfolio-Contacts__Form--Popup" class="hidden">
+          <div class="Portfolio-Contacts__Form--Popup__Content">
+            <h3>Subscribe To Tekoh</h3>
+            <form id="subscribeForm">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+              <button type="submit">Submit</button>
+            </form>
+            <button id="closeButton">Close</button>
+          </div>
+        </div>
+      </form>
+    </div>
   </div>
   </div>
   <footer class="Portfolio-Footer">
