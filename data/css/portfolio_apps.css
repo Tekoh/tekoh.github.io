@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@200&display=swap');
+
+.Portfolio-Container {
+    background-color: #282C33;
+    font-family: 'Fira Code', monospace;
+    font-size: 20px;
+    color: #ABB2BF;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1em;
+    user-select: none;
+
+}
+
+.Portfolio-Container p {
+    cursor: default;
+}
+
+.Portfolio-Container a {
+    text-decoration: none;
+    outline: none;
+    color: #ABB2BF;
+}
+
+.Portfolio-Main__ImageWrapper--Mobile {
+    display: none;
+}
+
+/* UNIVERSAL STYLES */
+#NavBar__Home {
+    padding-right: 20px;
+    font-size: 26px;
+    white-space: nowrap;
+    color: white;
+}
+
+#NavBar__Home:hover {
+    color: #C778DD;
+    transition: ease 0.3s;
+}
+
+#NavBar__Home::before {
+    content: '';
+    display: inline-block;
+    width: 20px; 
+    height: 20px; 
+    background-image: url(/data/images/StyleHomeB4.svg);
+    background-size: contain;
+    margin-right: 5px;
+}
+
+.Portfolio-Footer {
+    border-top: 1px solid white;
+    position: relative;
+    bottom: 0;
+    width: 97%;
+}
+
+.Portfolio-Footer__Wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Portfolio-Footer__Title {
+    padding: 5px;
+    padding-top: 10px;
+}
+
+#Portfolio-Footer__Copyright {
+    font-size: 10px;
+    text-align: center;
+}
+
+#Portfolio-Footer__Title--Head {
+    transition: ease 0.3s;
+}
+
+#Portfolio-Footer__Title--Head:hover {
+    color: #C778DD;
+    transition: ease 0.3s;
+}
+
+#Portfolio-Footer__Title--Uni::after {
+    content: 'University Academy 92';
+    color: #C778DD;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#Portfolio-Footer__Title--Uni:hover::after {
+    color: white;
+}
+
+.Portfolio-Apps {
+    border: 1px solid #ABB2BF;
+    width: 230px;
+    overflow: hidden;
+    margin: 1rem;
+    background-color: #282C33;
+    min-height: 300px;
+    height: auto;
+    font-family: 'fira code', monospace;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.Portfolio-Apps:hover {
+    box-shadow: 0 4px 15px rgba(199, 120, 221, 0.2);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+.Portfolio-Apps img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+}
+
+.Portfolio-Apps__Content {
+    padding: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.Portfolio-Apps__Content--Languages {
+    color: #C778DD;
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+}
+
+.Portfolio-Apps__Content--Title {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.Portfolio-Apps__Content--Description {
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+    font-size: 0.8rem;
+    flex-grow: 1;
+}
+
+.Portfolio-Apps__Button {
+    padding: 8px 16px;
+    background: transparent;
+    border: 1px solid #C778DD;
+    color: #ABB2BF;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.8rem;
+    cursor: pointer;
+    margin-top: auto;
+    transition: all 0.3s ease;
+    align-self: center;
+    width: calc(100% - 1.6rem);
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.Portfolio-Apps__Button:hover {
+    background: rgba(199, 120, 221, 0.1);
+    color: #C778DD;
+}
+
+.Portfolio-Apps__Grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10px, 220px));
+    gap: 25px;
+    padding: 20px;
+}
+
+.Portfolio-Header__Title {
+    font-size: 36px;
+    color: white;
+}
+
+.Portfolio-Header__Title::before {
+    content: '/';
+    color: #C778DD;
+}
+
+#Portfolio-Header__Description {
+    font-size: 18px;
+    color   : white;
+}
+
+#Portfolio-Header__Description::after {
+    content: ' (As of yet I do not have any completed applications)';
+    font-size: 14px;
+    color: #ABB2BF;
+}
+
+#Portfolio-Header__Description:hover {
+    font-size: 18px;
+    color   : #C778DD;
+    transition: ease 0.3s;
+}
+/* MOBILE DEVICES */
+@media (max-width: 1050px) {
+    .NavBar-Container a:not(:first-child) {display: none;}
+    .NavBar-Container a.NavBar-Container__Mobile {
+      float: right;
+      display: block;
+    }
+    .NavBar-Container.mobile {position: relative;}
+    .NavBar-Container.mobile a.NavBar-Container__Mobile {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .NavBar-Container.mobile a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .NavBar-Container.mobile {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #282c33df;
+        z-index: 100;
+    }
+    .NavBar-Container.mobile a {
+        display: block;
+        text-align: left;
+        padding: 20px;
+        font-size: 30px;
+    }
+
+    
+    .NavBar-Container a:hover {
+        color: #C778DD;
+        transform: scale(1.05);
+        transition: ease 0.3s;
+    }
+    
+    .NavBar-Container a::before {
+        content: '#';
+        color: #C778DD;
+        font-size: 29px;
+        padding-right: 2px;
+    }
+
+    .NavBar-Container a:hover::before {
+        content: '>';
+        color: #ABB2BF;
+        transition: ease 0.3s;
+    }
+    
+    .NavBar-Container a.active::before {
+        content: '/';
+        color: #ffffff;
+        transition: ease 0.3s;
+    }
+    
+    .NavBar-Container a.active {
+        color: #ffffff;
+        transition: ease 0.3s;
+    }
+
+    .Portfolio-Footer {
+        border-top: 1px solid white;
+        font-size: 16px;
+        position: relative;
+    }
+    
+    .Portfolio-Footer__Wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .Portfolio-Footer__Title {
+        padding: 3px;
+        padding-top: 7px;
+    }
+    
+    #Portfolio-Footer__Copyright {
+        font-size: 7px;
+        text-align: center;
+    }
+
+    .Portfolio-Footer__Media {
+        display: none;
+    }
+    
+    #Portfolio-Footer__Title--Uni::after {
+        content: 'UA92';
+        color: #C778DD;
+    }
+
+    .Portfolio-Apps__Button {
+        padding: 8px 16px;
+        background: transparent;
+        border: none;
+        color: #C778DD;
+        font-family: 'Fira Code', monospace;
+        font-size: 0.8rem;
+        cursor: pointer;
+        margin-top: auto;
+        transition: all 0.3s ease;
+        align-self: center;
+        width: calc(70% - 1.6rem);
+        position: absolute;
+        bottom: 1px;
+        left: 80%;
+        transform: translateX(-50%);
+    }
+    
+}
+
+
+/* FULL SCREEN */
+@media (min-width: 1051px) {
+
+    .NavBar-Wrapper{
+        display: flex;
+    }
+
+    .NavBar-Container a{
+        font-size: 27px;
+        padding-right: 20px;
+    }
+    
+    .NavBar-Container a:hover {
+        color: #C778DD;
+        transform: scale(1.05);
+        transition: ease 0.3s;
+    }
+    
+    .NavBar-Container a::before {
+        content: '#';
+        color: #C778DD;
+        font-size: 29px;
+        padding-right: 2px;
+    }
+
+    .NavBar-Container a:hover::before {
+        content: '>';
+        color: #ABB2BF;
+        transition: ease 0.3s;
+    }
+    
+    .NavBar-Container a.active::before {
+        content: '/';
+        color: #C778DD;
+        transition: ease 0.3s;
+    }
+    
+    .NavBar-Container a.active {
+        color: #ffffff;
+        transition: ease 0.3s;
+    }
+
+    .NavBar-Container .NavBar-Container__Mobile {
+        display: none;
+    }
+    
+}
